@@ -4,7 +4,9 @@ At [Synculario](http://www.syncular.io/), we build a team of developers who **as
 
 With our internal mentors and leaders, we help developers learn and grow. Not only professionally (hard skills), but also personally. We give feedback. We experiment. We learn from our mistakes during a weekly retrospective.
 
-To join our team, we need to validate your current skillset.
+We build exciting startups and products.
+
+To join our team, we need to validate your current skillset and mindset.
 
 ## Areas we will be evaluating
 
