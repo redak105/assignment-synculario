@@ -19,7 +19,7 @@ To join our team, we need to validate your current skillset and mindset.
 1. **Testing approach** (unit/integration/end2end tests)
 1. **Resolution** for all the challenges you faced
 
-NOTE: No need to write tests for every single function (which is obviously time consuming), but **please have at least 1-2 tests** to demonstrate you can set it up properly, following common sense and best practices.
+NOTE: No need to write tests for every single function (which is obviously time consuming), but **please have at least 1-2 tests** to demonstrate you can set it up properly. Follow common sense and best practices.
 
 ## Recommendations
 
