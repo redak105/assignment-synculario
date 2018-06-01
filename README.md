@@ -155,6 +155,8 @@ Good luck in your endeavor and remember...
 
 > "No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first." - Andy Hunt
 
-:-) 
+# LICENSE
+
+This assignment is created under the [MIT License](https://raw.githubusercontent.com/michaljuhas/assignment-synculario/master/LICENSE).
 
 [~Synculario](http://www.syncular.io/)
