@@ -53,7 +53,7 @@ You may use language and stack of your choice.
 
 Our preferred stack is based on Javascript (React, nodejs), Swift (iOS), Java (Android), Python and R for data engineering and analysis.
 
-Recommended data storage is Reddis. Should there be a good reason, feel free to experiment with another storage.
+Recommended data storage is Redis. Should there be a good reason, feel free to experiment with another storage.
 
 In general, the outcome of your work should be a simple MVP. You shouldn't spend too much time on it. Be efficient. 
 
@@ -101,7 +101,7 @@ We expect you will:
 
 * Build a simple iOS or Android app (choose one)
 * Build a basic API (backend for the app)
-* Import the data to a Reddis data storage
+* Import the data to a Redis data storage
 
 Feature set for the mobile app is defined by yourself. Create whatever you want using the data you have. [#KISS](https://en.wikipedia.org/wiki/KISS_principle)
 
@@ -115,7 +115,7 @@ We expect you will:
 
 * Build a simple web frontend (use React or Angular)
 * Build backend for the website (nodejs)
-* Import the data to a Reddis data storage
+* Import the data to a Redis data storage
 
 Feature set for the frontend website is defined by yourself. Create whatever you want using the data you have. [#KISS](https://en.wikipedia.org/wiki/KISS_principle)
 
