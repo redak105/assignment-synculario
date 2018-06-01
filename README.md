@@ -157,6 +157,6 @@ Good luck in your endeavor and remember...
 
 # LICENSE
 
-This assignment is created under the [MIT License](https://raw.githubusercontent.com/michaljuhas/assignment-synculario/master/LICENSE).
+This assignment is created under the [MIT License](https://github.com/michaljuhas/assignment-synculario/blob/master/LICENSE).
 
 [~Synculario](http://www.syncular.io/)
