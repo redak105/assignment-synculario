@@ -1,6 +1,6 @@
 # Synculario
 
-At [Synculario](http://www.syncular.io/), we build a team of developers who **aspire to become A-players one day.**
+At [Synculario](http://www.syncular.io/), we build a team of developers who **aspire to become A-players one day.** Super-stars!
 
 With our internal mentors and leaders, we help developers learn and grow. Not only professionally (hard skills), but also personally. We give feedback. We experiment. We learn from our mistakes during a weekly retrospective.
 
