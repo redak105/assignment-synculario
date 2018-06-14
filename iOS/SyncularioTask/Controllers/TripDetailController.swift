@@ -17,6 +17,7 @@ class TripDetailController: UIViewController {
     @IBOutlet weak var labelDuration: UILabel!
     @IBOutlet weak var labelBike: UILabel!
         
+    /// trip detail
     var trip:TripDetail?
     
     override func viewDidLoad() {
@@ -39,7 +40,14 @@ class TripDetailController: UIViewController {
             if let stoptime = trip.stoptime {
                 self.labelTimeEnd.text = Date(string: stoptime)?.format()
             }
-        }        
+        } else {
+            self.labelStationStart.text = ""
+            self.labelStationEnd.text = ""
+            self.labelDuration.text = ""
+            self.labelBike.text = ""
+            self.labelTimeStart.text = ""
+            self.labelTimeEnd.text = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +55,6 @@ class TripDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -25,16 +25,11 @@ class MapController: UIViewController, MKMapViewDelegate {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         mapView.setRegion(region, animated: true)
         
-        // load data
+        // load data from Apollo
         let queryStations = StationsQuery()
-        apollo.fetch(query: queryStations) { [weak self] result, error in
+        apollo.fetch(query: queryStations) { result, error in
             guard let stations = result?.data?.stations else { return }
-            self?.stations = stations.map { ($0?.fragments.stationDetail)! }
-            
-            for station in (self?.stations)! {
-                let annotation = StationAnnotation(station: station, coordinate: CLLocationCoordinate2D(latitude: station.startStationLatitude!, longitude: station.startStationLongitude!))
-                self?.mapView.addAnnotation(annotation)
-            }
+            self.stations = stations.map { ($0?.fragments.stationDetail)! }
         }                
     }
 
@@ -47,25 +42,18 @@ class MapController: UIViewController, MKMapViewDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
         if let controller = segue.destination as? TripsController, let station = sender as? StationDetail {
             controller.stationId = station.startStationId!
         }
     }
     
-    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        
-    }
-
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        
-    }
+    // MARK: - MKMPView delegate
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         guard let annotation = annotation as? StationAnnotation else { return nil }
+        
         let identifier = "marker"
         var view: MKMarkerAnnotationView
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
@@ -82,10 +70,22 @@ class MapController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let annotation = view.annotation as! StationAnnotation
         
+        let annotation = view.annotation as! StationAnnotation        
         self.performSegue(withIdentifier: "segueStation", sender: annotation.station)
-//        self.navigationController?.performSegue(withIdentifier: "segueStation", sender: annotation)
     }
  
+    // MARK: - Functions
+    
+    /// Add pins
+    func addPins() {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        
+        for station in self.stations {
+            let annotation = StationAnnotation(station: station, coordinate: CLLocationCoordinate2D(latitude: station.startStationLatitude!, longitude: station.startStationLongitude!))
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
 }

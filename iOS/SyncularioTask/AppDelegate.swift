@@ -9,6 +9,7 @@
 import UIKit
 import Apollo
 
+// init GraphQL
 let graphQLEndpoint = "http://localhost:3000/graphql"
 let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
