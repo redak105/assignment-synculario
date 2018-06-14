@@ -1,3 +1,20 @@
+# Instruction
+
+## Server
+
+Instal NPM packager. 
+In folder ApolloServer run command 'npm install'. It will install packages. 
+The run 'npm start'. It start server.
+
+## iOS App
+
+Install Cocoapods packager.
+In folder iOS run command 'pod install'. It will instal required frameworks.
+It will create SyncularioTask.xcworkspace file. Open it and run default schema.
+
+
+
+
 # Synculario
 
 At [Synculario](http://www.syncular.io/), we build a team of developers who **aspire to become A-players one day.** Super-stars!
