@@ -1,0 +1,13 @@
+
+query Stations {
+    stations {
+        ...StationDetail
+    }
+}
+
+fragment StationDetail on Station {
+    startStationId
+    startStationName
+    startStationLatitude
+    startStationLongitude
+}

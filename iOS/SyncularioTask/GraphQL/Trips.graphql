@@ -1,0 +1,30 @@
+query Trips {
+    trips {
+        ...TripDetail
+    }
+}
+
+query StationTrips($stationId: Int!) {
+    trips(stationId: $stationId) {
+        ...TripDetail
+    }
+}
+
+fragment TripDetail on Trip {
+    tripduration
+    starttime
+    stoptime
+    startStationId
+    startStationName
+    startStationLatitude
+    startStationLongitude
+    endStationId
+    endStationName
+    endStationLatitude
+    endStationLongitude
+    bikeid
+    name_localizedValue0
+    usertype
+    gender
+}
+
